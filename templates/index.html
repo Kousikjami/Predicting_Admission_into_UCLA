@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ML prediction</title>
+        <style>
+            body {
+                background-image: url("../static/C.jpg");
+                background-repeat: no-repeat;
+                background-size:  cover;
+            }
+
+            table {
+                border-collapse: separate;
+            }
+
+            td {
+                border: 0px;
+                padding: 5px;
+            }
+
+            /* Add a line break after each row */
+            tr {
+                height: 30px;
+                margin-bottom: 5px;
+            }
+        </style>
+    <body>
+        <center>
+            <h1>PREDICTION DETAILS</h1>
+            <div class="form-container">
+                <form action="/predict" method="post">
+                    <table class="form-table">
+                        <tr>
+                            <td><b>GRE Score:</b></td>
+                            <td><input type="text" name="a" placeholder="0 to 340"></td>
+                            <br></br>
+                        </tr>
+                        <tr>
+                            <td><b>TOEFL Score:</b></td>
+                            <td><input type="text" name="b" placeholder="0 to 120"></td>
+                        </tr>
+                        <tr>
+                            <td><b>University Rating:</b></td>
+                            <td><input type="text" name="c" placeholder="1 to 5"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Standard operating procedure(SOP):</b></td>
+                            <td><input type="text" name="d" placeholder="1 to 5"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Letter of Recommendation(LOR):</b></td>
+                            <td><input type="text" name="e" placeholder="1 to 5"></td>
+                        </tr>
+                        <tr>
+                            <td><b>CGPA:</b></td>
+                            <td><input type="text" name="f" placeholder="CGPA"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Research:</b></td>
+                            <td><input type="text" name="g" placeholder="1 if YES or 0 if NO"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button class="btn btn-success"><b>Predict</b></button>
+                </form>
+                <div>{{prediction}}</div>
+            </div>
+        </center>          
+    </body>
+</head>
+</html>
